@@ -6,8 +6,9 @@
         xmlns:local="clr-namespace:WpfApplication1"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
-       
-        <Button>Hello</Button>
-    </Grid>
+    <StackPanel Orientation="Vertical">
+        <TextBlock FontSize="200" Margin="1 20 20 17">身高:</TextBlock>
+        <TextBlock>體重:</TextBlock>
+    <Button Padding="5"
+    </StackPanel>
 </Window>
