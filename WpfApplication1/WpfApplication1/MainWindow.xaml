@@ -5,10 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApplication1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <StackPanel Orientation="Vertical">
-        <TextBlock FontSize="200" Margin="1 20 20 17">身高:</TextBlock>
-        <TextBlock>體重:</TextBlock>
-    <Button Padding="5"
+        Title="MainWindow" Height="500" Width="500">
+    <StackPanel Background="AliceBlue" Orientation="Vertical">
+        <StackPanel Orientation="Horizontal">
+            <TextBlock FontSize="30" Margin="20 20 20 0">身高:</TextBlock>
+            <TextBox Width="330" Margin="10 20 30 0"></TextBox>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock FontSize="30" Margin="20 20 20 0">體重:</TextBlock>
+            <TextBox Width="330" Margin="10 20 30 0"></TextBox>
+        </StackPanel>
+        <Button FontSize="25" Padding="5" Margin="20 20 20 0" Background="Aquamarine" >計算</Button>
+        <TextBlock FontSize="30" Margin="20 20 20 0">結果:</TextBlock>
+        <TreeView FontSize="20" Margin="300 80 60 0" Background="Bisque">貼心小叮嚀: 如果你覺得你很胖，那最好是給我少吃一點 </TreeView>
     </StackPanel>
 </Window>
