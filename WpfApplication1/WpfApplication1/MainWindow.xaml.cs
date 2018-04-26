@@ -25,9 +25,41 @@ namespace WpfApplication1
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void HeightClearBtn_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            HeightBox.Text = "";
+            HeightBox.Background = Brushes.LightYellow;
+           
+        }
+
+        private void WeightClearBtn_Click(object sender, RoutedEventArgs e)
+        {
+            WeightBox.Text = "";
+            WeightBox.Background = Brushes.LightYellow;
+
+        }
+
+        private void CountBtn_Click(object sender, RoutedEventArgs e)
+        {
+           
+        }
+
+        private void HeightBar_ValveChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            HeightBox.Text = HeightBar.Value.ToString();
+
+            // 要先在 HeightBox 上增加 Text=""
+            double h = double.Parse(HeightBox.Text) / 100;
+            double w = double.Parse(WeightBox.Text);
+            double bmi = w / (h * h);
+
+            AnsBlock.Text = bmi.ToString();
+
+        }
+
+        private void WeightBar_ValveChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            WeightBox.Text = WeightBar.Value.ToString();
         }
     }
 }

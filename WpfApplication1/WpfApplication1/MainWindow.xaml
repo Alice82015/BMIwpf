@@ -7,17 +7,26 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="500" Width="500">
     <StackPanel Background="AliceBlue" Orientation="Vertical">
+
         <StackPanel Orientation="Horizontal">
-            <TextBlock FontSize="30" Margin="20 20 20 0">身高:</TextBlock>
-            <TextBox Width="330" Margin="10 20 30 0"></TextBox>
+            <TextBlock FontSize="25" Margin="30 20 20 0">身高:</TextBlock>
+            <TextBox Width="280" Margin="10 20 0 0" Text="0" x:Name="HeightBox"></TextBox>
+            <Button Width="60"  Margin="10 20 0 0" x:Name="HeightClearBtn" Background="LightBlue" Click="HeightClearBtn_Click" >清除</Button>
         </StackPanel>
+
+        <Slider Width="420" Margin="30 10 30 10 " Minimum="0" Maximum="200" Background="White" x:Name="HeightBar" ValueChanged="HeightBar_ValveChanged"></Slider>
+        
         <StackPanel Orientation="Horizontal">
-            <TextBlock FontSize="30" Margin="20 20 20 0">體重:</TextBlock>
-            <TextBox Width="330" Margin="10 20 30 0"></TextBox>
+            <TextBlock FontSize="25" Margin="30 20 20 0">體重:</TextBlock>
+            <TextBox Width="280" Margin="10 20 0 0" Text="0" x:Name="WeightBox" ></TextBox>
+            <Button Width="60"  Margin="10 20 0 0" x:Name="WeightClearBtn" Background="LightBlue" Click="WeightClearBtn_Click">清除</Button>
         </StackPanel>
-        <Button FontSize="25" Padding="5" Margin="20 20 20 0" Background="Aquamarine" >計算</Button>
-        <TextBlock FontSize="30" Margin="20 20 20 0">結果:</TextBlock>
-        <TextBlock FontSize="70" Margin="220 20 220 0" Foreground="Red" >0</TextBlock>
-        <TreeView FontSize="20" Margin="300 60 60 0" Background="Bisque">貼心小叮嚀: 如果你覺得你很胖，那最好是給我少吃一點 </TreeView>
+
+        <Slider Width="420" Margin="30 10 30 0 " Minimum="0" Maximum="200" Background="White" x:Name="WeightBar" ValueChanged="WeightBar_ValveChanged" ></Slider>
+
+        <Button FontSize="20" Padding="10" Margin="120 20 120 0" Background="Aquamarine" x:Name="CountBtn" Click="CountBtn_Click">計算</Button>
+
+        <TextBlock TextAlignment="Center" FontSize="40" Margin="20 20 20 0" Foreground="DarkGreen" x:Name="AnsBlock" >0</TextBlock>
+        
     </StackPanel>
 </Window>
